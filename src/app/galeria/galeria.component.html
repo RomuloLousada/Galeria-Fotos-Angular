@@ -1,0 +1,17 @@
+<div>
+    <h2>{{titulo}}</h2>
+    <div *ngIf="fotos.length">
+        <img [src]="fotos[index]" alt="Fotos">
+    </div>
+    <div *ngIf="!fotos.length">
+        <h3>Nenhuma Foto</h3>
+    </div>
+</div>
+<div class="separator" *ngIf="fotos.length">
+    Foto {{index + 1}} de {{fotos.length}}
+    <br/>
+    <button [disabled]="index == 0" (click)="changePhoto(index, '--')">|<</button>
+    <button [disabled]="index == 0" (click)="changePhoto(index, '-')"><</button>
+    <button [disabled]="index == (fotos.length - 1)" (click)="changePhoto(index, '+')">></button>
+    <button [disabled]="index == (fotos.length - 1)" (click)="changePhoto(index, '++')">>|</button>
+</div>

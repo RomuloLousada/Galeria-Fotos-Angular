@@ -1,0 +1,17 @@
+div {
+    text-align: center;
+}
+
+img {
+    height: 80vh;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.separator {
+    border-bottom: 2px solid #000;
+}
